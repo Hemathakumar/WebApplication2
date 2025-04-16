@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+
+@using (Html.BeginForm("hello", "Home", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            <td>@Html.Label("Enter your first name")</td>
+            <td>@Html.TextBox("fname")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Enter your Last name")</td>
+            <td>@Html.TextBox("lname")</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                @Html.TextBox("sub_button", "Full Name", new { type = "submit" })
+
+
+        </td>
+    </tr>
+</table>
+
+
+}

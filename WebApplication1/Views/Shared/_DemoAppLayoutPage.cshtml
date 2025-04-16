@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_DemoAppLayoutPage</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+
+        .danger {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <div>
+
+          @Html.Partial("_HeaderPage")
+         
+        </div>
+
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div>
+            @Html.Partial("_footerpage")
+        </div>
+        
+    </footer>
+</body>
+</html>

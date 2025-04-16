@@ -1,0 +1,29 @@
+﻿@model  List<WebApplication1.Models.Employee>
+
+<h2>Employees Details</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+            </tr>
+
+    </thead>
+    <tbody>
+        @foreach(var emp in Model)
+            {
+             <tr>
+                 <td>@emp.Id</td>
+                 <td>@emp.Name</td>
+                 <td>@emp.Salary</td>
+                 <td>@emp.Department</td>
+             </tr>
+            }
+    </tbody>
+
+
+</table>
+
