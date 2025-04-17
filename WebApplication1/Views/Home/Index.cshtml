@@ -11,31 +11,97 @@
 }
 
 
-<div class="">
+@*<div class="form-control">
 
     <label>Create Employee</label>
 
     @using (Html.BeginForm("postEmployee", "Home", FormMethod.Post))
     {
-        <div>
-            <label for="Id">ID:</label>
-            <input type="text" name="ID" /> <br />
+<div class="container">
+    <div class="form-group">
+
+        <label for="Id">ID:</label>
+        <input type="text" name="ID" /> <br />
+    </div>
+    <div class="form-group">
+
+        <label for="Id">Name:</label>
+        <input type="text" name="Name" /><br />
+
+    </div>
+    <div class="form-group">
+
+        <label for="Id">Salary:</label>
+        <input type="text" name="Salary" /><br />
+
+    </div>
+    <div class="form-group">
+
+        <label for="Id">Department:</label>
+        <input type="text" name="Department" /><br />
 
 
-            <label for="Id">Name:</label>
-            <input type="text" name="Name" /><br />
+    </div>
+    <div class="form-group">
 
-            <label for="Id">Salary:</label>
-            <input type="text" name="Salary" /><br />
 
-            <label for="Id">Department:</label>
-            <input type="text" name="Department" /><br />
+        <input type="submit" value="Submit" />
 
-            <input type="submit" value="Submit" />
+    </div>
 
-        </div>
+
+
+</div>
 
     }
 
-</div>
+</div>*@
+
+
+    <div class="container mt-5 bg-light">
+        <div class="card shadow-lg rounded-4">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Employee Registration Form</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="empName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="empName" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="empEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="empEmail" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="empPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="empPhone" placeholder="123-456-7890" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="empDept" class="form-label">Department</label>
+                        <select class="form-select" id="empDept" required>
+                            <option value="">Choose...</option>
+                            <option value="HR">Human Resources</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="empAddress" class="form-label">Address</label>
+                        <textarea class="form-control" id="empAddress" rows="3" placeholder="123 Main St, City, Country"></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
 

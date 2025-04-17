@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="HtmlHelperExtension.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +185,8 @@
     <Content Include="Views\Home\getEmployeelist.cshtml" />
     <Content Include="Views\Home\DisplyEmployee.cshtml" />
     <Content Include="Views\Home\postEmployee2.cshtml" />
+    <Content Include="Views\Account\AddUser.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
