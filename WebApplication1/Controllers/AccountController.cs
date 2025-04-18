@@ -29,10 +29,20 @@ namespace WebApplication1.Controllers
                 userrepo.AddUser(user);
 
                 ViewBag.msg="user Created";
-                return View("Index");
+                return View("DisplayUsers", userrepo.GetAllUsers());
             }
             return View();
         }
+
+
+        public ActionResult DisplayUsers()
+        {
+
+            UserRepository userrepo = new UserRepository();
+            List<User> emplist = userrepo.GetAllUsers();
+            return View(emplist);
+        }
+        
 
     }
 }

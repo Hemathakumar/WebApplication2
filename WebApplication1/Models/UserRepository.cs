@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 
 using System.Linq;
@@ -9,7 +10,7 @@ namespace WebApplication1.Models
 {
     public class UserRepository
     {
-        private  string _connectionString = "Data Source=LAPTOP-A0G3LSSC;Initial Catalog=DemoMVCApp;Integrated Security=True;";
+        private string _connectionString = ConfigurationManager.ConnectionStrings["DemoMVCAppConnection"].ToString();
 
         public UserRepository()
         {
@@ -49,7 +50,7 @@ namespace WebApplication1.Models
                 {
                     users.Add(new User
                     {
-                        Username = reader["Name"].ToString(),
+                        Username = reader["Username"].ToString(),
                         Email = reader["Email"].ToString(),
                         Password = reader["Password"].ToString(),
                         Age = Convert.ToInt32(reader["Age"])
