@@ -83,6 +83,8 @@ namespace ExampleforEntityframework.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(employee).State = EntityState.Modified;
+                Employee employee2 = db.employees.Find(2);
+                employee2 = employee;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapp2", "webapp2\webapp2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleforEntityframework", "ExampleforEntityframework\ExampleforEntityframework.csproj", "{C2191609-CBD7-40B6-8968-67DA8F8712D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBfirstexample", "DBfirstexample\DBfirstexample.csproj", "{81DAFB64-E32B-4307-94B7-EF57BF0EDC73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtersexamples", "Filtersexamples\Filtersexamples.csproj", "{14C4E7EF-38A4-43BF-9818-6696C677C7FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C2191609-CBD7-40B6-8968-67DA8F8712D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2191609-CBD7-40B6-8968-67DA8F8712D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2191609-CBD7-40B6-8968-67DA8F8712D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DAFB64-E32B-4307-94B7-EF57BF0EDC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DAFB64-E32B-4307-94B7-EF57BF0EDC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DAFB64-E32B-4307-94B7-EF57BF0EDC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DAFB64-E32B-4307-94B7-EF57BF0EDC73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C4E7EF-38A4-43BF-9818-6696C677C7FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C4E7EF-38A4-43BF-9818-6696C677C7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C4E7EF-38A4-43BF-9818-6696C677C7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C4E7EF-38A4-43BF-9818-6696C677C7FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

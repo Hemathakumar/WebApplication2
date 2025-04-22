@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using webapp2.Models;
 
 namespace webapp2.Controllers
 {
@@ -10,6 +11,10 @@ namespace webapp2.Controllers
     {
         public ActionResult Index()
         {
+            myDBEntities dbentities = new myDBEntities();
+            IEnumerable<Product> list = dbentities.Products.ToList();
+
+            var pd = list.Where(p => p.Price > 500).ToList();
             return View();
         }
 

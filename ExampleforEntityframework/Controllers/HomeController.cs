@@ -4,17 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ExampleforEntityframework;
 
 namespace ExampleforEntityframework.Controllers
 {
+   
     public class HomeController : Controller
     {
         private EmployeeDBContext dBContext = new EmployeeDBContext();
+       
         public ActionResult Index()
         {
-            
-            return View(dBContext.employees.ToList());
+            throw new Exception("Something went wrong");
+            //return View(dBContext.employees.ToList());
         }
+        
 
         public ActionResult About()
         {
@@ -34,5 +38,7 @@ namespace ExampleforEntityframework.Controllers
         {
             return View(dBContext.employees.ToList());
         }
+
+
     }
 }
