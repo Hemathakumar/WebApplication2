@@ -47,5 +47,21 @@ namespace DBfirstexample.Controllers
             dbentity.SaveChanges();
             return View(result);
         }
+        public ActionResult GetEmployeesList()
+        {
+
+            DemoEntityEntities dbentity = new DemoEntityEntities();
+            var result = dbentity.Employees.ToList(); //return all records
+                                                      //Employee emp = new Employee();
+                                                      //Employee emp2 = dbentity.Employees.Find(1);
+                                                      //Employee emp2 = dbentity.Employees.Where(e=>e.Name.StartsWith("H")).SingleOrDefault(); //
+                                                      //Employee emp2 = dbentity.Employees.Where(e=>e.Name.StartsWith("H")).First();
+
+            //Employee emp4 = dbentity.Employees.Remove(emp);
+            //Employee emp3 = dbentity.Employees.Add(emp);
+
+            dbentity.SaveChanges();
+            return View(result);
+        }
     }
 }
