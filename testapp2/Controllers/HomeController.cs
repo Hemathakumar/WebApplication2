@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using testapp2.Models;
 
 namespace testapp2.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()

@@ -10,7 +10,7 @@ namespace Filtersexamples.Controllers
     
     public class HomeController : Controller
     {
-        [CustomeException]
+        
         public ActionResult Index()
         {
             //throw new Exception("something went wrong in index method");
@@ -18,7 +18,7 @@ namespace Filtersexamples.Controllers
 
         }
 
-        [CustomeException]
+       
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

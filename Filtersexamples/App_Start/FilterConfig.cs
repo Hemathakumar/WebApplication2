@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Filtersexamples.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Filtersexamples
@@ -7,7 +8,10 @@ namespace Filtersexamples
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new HandleErrorAttribute(),1);
+            //filters.Add(new CustomeException(),2);//register filter on globally
+            //filters.Add(new CustomeException(),3);
+            
         }
     }
 }

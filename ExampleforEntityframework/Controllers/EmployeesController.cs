@@ -8,8 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using ExampleforEntityframework.Models;
 
+
 namespace ExampleforEntityframework.Controllers
 {
+   
     public class EmployeesController : Controller
     {
         private EmployeeDBContext db = new EmployeeDBContext();
@@ -45,7 +47,7 @@ namespace ExampleforEntityframework.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+       
         public ActionResult Create([Bind(Include = "Id,Name,Department,Salary")] Employee employee)
         {
             if (ModelState.IsValid)
