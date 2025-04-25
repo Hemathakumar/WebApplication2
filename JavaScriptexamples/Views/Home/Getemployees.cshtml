@@ -1,0 +1,82 @@
+﻿@model List<JavaScriptexamples.Models.Employee>
+@{
+    ViewBag.Title = "Getemployees";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Getemployees</h2>
+
+<input type="text" id="searchinput" placeholder="search by name" class="form-control" mb-3 /> <br/>
+
+<!-- Table -->
+<table class="table table-bordered" id="EmployeeTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Department</td>
+                <td>@employee.Salary</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div>
+    <input type="text" id="searchBox" placeholder="Search product..." />
+    <ul id="productList">
+        <li data-name="iPhone 14" data-category="Electronics">iPhone 14 - Electronics</li>
+        <li data-name="Echo Dot" data-category="Smart Home">Echo Dot - Smart Home</li>
+        <li data-name="Kindle" data-category="Electronics">Kindle - Electronics</li>
+        <li data-name="Coffee Maker" data-category="Kitchen">Coffee Maker - Kitchen</li>
+    </ul>
+</div>
+
+<br/>
+<button id="btnhello">get Hello method</button>
+<div id="LoadData"></div>
+<script>
+   
+    $(document).ready(function () {
+        $('#searchBox').on('input', function () {
+            var searchValue = $(this).val().toLowerCase();
+
+            $('#productList li').filter(function () {
+                $(this).toggle($(this).data('name').toLowerCase().includes(searchValue));
+            });
+        });
+        $("#searchinput").on("keyup", function () {
+            var value = $(this).val().toLocaleLowerCase();
+            $("#EmployeeTable tbody tr").filter(function () {
+                $(this).toggle($(this).text().toLocaleLowerCase().indexOf(value)>-1)
+            });
+        });
+
+
+        $("#btnhello").click(function () {
+            $.ajax({
+                url: '/Home/Hello',
+                type: 'GET',
+                success: function (data) {
+                    $("#LoadData").html(data);
+                },
+                error: function () {
+                    $("#LoadData").html("failed to load data");
+                }
+            })
+        });
+
+
+
+    });
+</script>

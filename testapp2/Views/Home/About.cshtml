@@ -5,3 +5,37 @@
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+<form id="feedbackForm">
+    <input type="text" id="Name" name="Name" placeholder="Your Name" required />
+    <input type="text" id="Comment" name="Comment" placeholder="Your Comment" required />
+    <button type="submit">Submit Feedback</button>
+</form>
+
+<div id="feedbackResult"></div>
+
+
+@*@section scripts {
+    <script>
+$("#feedbackForm").submit(function(e) {
+    e.preventDefault(); // Stop normal form submission
+
+    $.ajax({
+        url: '@Url.Action("SubmitFeedback", "Home")',
+        method: "POST",
+        data: $(this).serialize(), // send form data
+        success: function(response) {
+            $("#feedbackResult").text(response.message);
+            $("#feedbackResult").append("Name: " + $("#Name").val() + "<br/>");
+            $("#feedbackResult").append("Name: " + $("#Name").val() + "<br/>");
+            $("#Name").val('');
+            $("#Comment").val('');
+           
+
+        },
+        error: function() {
+            alert("Failed to submit feedback!");
+        }
+    });
+});
+    </script>
+}*@

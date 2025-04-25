@@ -12,4 +12,16 @@ namespace testapp2.Models
         public int Age { get; set; }
         public string Address { get; set; }
     }
+    public class Student
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
+    public class FeedbackModel
+    {
+        public string Name { get; set; }
+        public string Comment { get; set; }
+    }
+
 }
