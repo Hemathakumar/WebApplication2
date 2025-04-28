@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace demotest3.Controllers
+namespace WEBAPIDEMO.Controllers
 {
     public class ValuesController : ApiController
     {
@@ -24,7 +24,6 @@ namespace demotest3.Controllers
         // POST api/values
         public void Post([FromBody] string value)
         {
-
         }
 
         // PUT api/values/5
