@@ -15,8 +15,8 @@ namespace ExampleforEntityframework.Controllers
        
         public ActionResult Index()
         {
-            throw new Exception("Something went wrong");
-            //return View(dBContext.employees.ToList());
+           // throw new Exception("Something went wrong");
+            return View(dBContext.employees.ToList());
         }
         
 
