@@ -4,15 +4,21 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WEBAPIDEMO.Models;
+
 
 namespace WEBAPIDEMO.Controllers
 {
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+       
+      
+        public IEnumerable<Employee> Get()
         {
-            return new string[] { "value1", "value2" };
+            localDBEntities1 localDBEntities1 = new localDBEntities1();
+
+            return localDBEntities1.Employees.ToList() ;
         }
 
         // GET api/values/5
@@ -22,7 +28,12 @@ namespace WEBAPIDEMO.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Employee emp)
+        {
+           
+            
+        }
+        public void Post([FromUri] string value)
         {
         }
 

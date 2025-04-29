@@ -12,15 +12,16 @@ namespace WEBAPIDEMO.Controllers
     {
         public ActionResult Index()
         {
-            HttpClient client = new HttpClient();
-            string baseUrl = "http://localhost:portnumber/api/values"; // Replace with your actual URL
+            //HttpClient client = new HttpClient();
+            //string baseUrl = "http://localhost:portnumber/api/values"; // Replace with your actual URL
 
-            // Try JSON
-            string jsonUrl = baseUrl + "?format=json";
-            var jsonResponse =  client.GetAsync(jsonUrl);
+            //// Try JSON
+            //string jsonUrl = baseUrl + "?format=json";
+            
+            //var jsonResponse =  client.GetAsync(jsonUrl);
             ViewBag.Title = "Home Page";
 
-            return View(jsonResponse);
+            return View();
         }
     }
 }
