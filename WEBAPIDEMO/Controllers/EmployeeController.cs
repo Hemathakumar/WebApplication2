@@ -5,12 +5,15 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WEBAPIDEMO.Models;
+using System.Web.Http.Cors;
 
 namespace WEBAPIDEMO.Controllers
 {
+    [EnableCorsAttribute("*", "*", "*")]
     public class EmployeeController : ApiController
     {
         //Get 
+        
         public IEnumerable<Employee> Get()
         {
             localDBEntities1 localDBEntities1 = new localDBEntities1();
