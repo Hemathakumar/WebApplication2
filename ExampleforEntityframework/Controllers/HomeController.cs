@@ -15,8 +15,9 @@ namespace ExampleforEntityframework.Controllers
        
         public ActionResult Index()
         {
-           // throw new Exception("Something went wrong");
-            return View(dBContext.employees.ToList());
+            // throw new Exception("Something went wrong");
+            ViewBag.Message = "Your application description page.";
+            return View("Index");
         }
         
 
@@ -38,7 +39,19 @@ namespace ExampleforEntityframework.Controllers
         {
             return View(dBContext.employees.ToList());
         }
+        public ActionResult Details(int id)
+        {
+            if (id <= 0)
+                return new HttpNotFoundResult();
 
+            return View("DetailsView");
+        }
+
+        public ActionResult Details(Employee emp)
+        {
+           
+            return View("DetailsView");
+        }
 
     }
 }

@@ -6,14 +6,36 @@ using System.Net.Http;
 using System.Web.Http;
 using WEBAPIDEMO.Models;
 using System.Web.Http.Cors;
+using Microsoft.Web.Http;
 
 namespace WEBAPIDEMO.Controllers
 {
-    [EnableCorsAttribute("*", "*", "*")]
+    
+    [RoutePrefix("api/v{version:apiVersion}/employee")]
     public class EmployeeController : ApiController
     {
+
+        [HttpGet]
+        [Route("")]
+        [MapToApiVersion("1.0")]
+        public IHttpActionResult GetV1() 
+        {
+            return Ok("Employee - v1");
+                }
+
+        [HttpGet]
+        [Route("")]
+        [MapToApiVersion("2.0")]
+        public IHttpActionResult GetV2()
+        {
+
+          return  Ok("Employee - v2");
+        }
+
+
+
         //Get 
-        
+
         public IEnumerable<Employee> Get()
         {
             localDBEntities1 localDBEntities1 = new localDBEntities1();

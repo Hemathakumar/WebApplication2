@@ -8,8 +8,13 @@ using System.Net.Http;
 
 namespace WEBAPIDEMO.Controllers
 {
+
+    
     public class HomeController : Controller
     {
+       
+
+
         public ActionResult Index()
         {
             //HttpClient client = new HttpClient();
@@ -24,4 +29,8 @@ namespace WEBAPIDEMO.Controllers
             return View();
         }
     }
+   
+
+
+
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Serialization;
+﻿using Microsoft.Web.Http;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,13 @@ namespace WEBAPIDEMO
             //EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             //config.EnableCors(cors);
             // Web API routes
+            config.AddApiVersioning(o =>
+            {
+                o.AssumeDefaultVersionWhenUnspecified = true;
+                o.DefaultApiVersion = new ApiVersion(1, 0);
+                o.ReportApiVersions = true;
+            });
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
